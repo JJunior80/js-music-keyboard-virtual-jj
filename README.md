@@ -26,6 +26,7 @@ Este projeto é um **piano virtual** funcional, que pode ser tocado diretamente 
 - **JavaScript (ES6)** para interação dinâmica com a DOM e manipulação de áudio.
 
 ## 📂 Estrutura do Projeto
+```
 📦 js-music-keyboard-virtual
 ├── 📂 src
 │   ├── 📂 imagem
