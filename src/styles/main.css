@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #FFD700; /* Dourado vibrante */
+    --secondary-color: #4B0082; /* Roxo musical */
+    --white-key-color: #FFF;
+    --black-key-color: #000;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("../imagem/fundoPNG01.png") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .container {
+    width: 800px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto translúcido */
+    box-shadow: 0px 0px 15px var(--primary-color);
+  }
+  
+  .container header {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .piano-keys {
+    display: flex;
+    margin-top: 40px;
+  }
+  
+  .piano-keys .key {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    position: relative;
+    text-transform: uppercase;
+  }
+  
+  /* 🔥 Estilização vibrante das teclas do piano */
+  .piano-keys .white {
+    width: 70px;
+    height: 230px;
+    border: 2px solid var(--black-key-color);
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #fff 96%, #ddd 4%);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .piano-keys .black {
+    width: 44px;
+    height: 140px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(to bottom, #333, #000);
+    border: 2px solid var(--secondary-color);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* 🔥 Efeito neon ao pressionar as teclas */
+  .piano-keys .white.active {
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.4), 0px 0px 10px var(--primary-color);
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  }
+  
+  .piano-keys .black.active {
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1), 0px 0px 10px var(--secondary-color);
+    background: linear-gradient(to bottom, #000, #444);
+  }
+  
+  .piano-keys .key span {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.13rem;
+    color: var(--primary-color);
+  }
+  
+  /* 🔥 Removendo os nomes das teclas caso o usuário desative */
+  .piano-keys .key.hide span {
+    display: none;
+  }
+  
